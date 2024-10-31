@@ -1,19 +1,23 @@
-# Exercice - JS - TS - AtelierPromptingIA :memo:
+# 📝 Exercice - JS - TS - AtelierPromptingIA
 
-## Comment travailler sur cet atelier ?
+## 🎯 Comment travailler sur cet atelier ?
 
-Tout d'abord clonez le projet et observez la convetion de branching.
-Les branches sont scindés par exercice, `exercice1`, `exercice2`, etc...
+Clonez le projet
 
-Créer vous une branche par exercice afin de le résoudre et poussez vos solutions en ligne.
-Si vous travaillez sur la solution de `exercice1` depuis cette branche créez vous une branche de solution sous ce format:
-  
-> exercice1_IA_YYYY_MM_DD_nom_prenom
+```bash
+git clone <AJOUTER l'URL DU REPO FINAL> 
+```
+
+Créez vous une branche si vous en avez la possibilité afin de pousser vos résultats sur une branche unique.
+
+> AtelierPromptingIA_YYYY_MM_DD_nom_prenom
+
+Les dossiers sont scindés par exercice, `exercice1`, `exercice2`, etc...
 
 Chacun des exercices, dispose d'un README.md se suffisant à lui même car :
 - il vous donne les consignes de l'exercice
-- vous sert de branche source pour tirer votre branche de solution
-- vos solutions sont à ajoutées directement dans le README.md de votre nouvelle branche crée
+- vous sert d'environnement de travail
+- vos solutions sont à ajoutées directement dans le README.md de chaque dossier
  
 L'objectif ici est d'utiliser votre assistant d'IA générative dans la pratique des techniques de prompt engineering. 
 Vos essais ne seront pas forcément concluant du premier coup, pour cela n'hésitez pas à intégrer des explications détaillés en plus du prompt qui vous a permis de résoudre nos différents cas d'usage.
