@@ -11,12 +11,17 @@ Possible example:
 
 Now it's your turn to integrate your prompt below: 👀
 ```typescript
-Write your prompt here
+Generate a method in javascript that accept a number and return odd if it is odd or even of it is even
 ```
 
 What was the response?
 ```typescript
-Write AI response here
+function isEvenOrOdd(number: number): string {
+  if (number % 2 === 0) {
+    return 'Even';
+  }
+  return 'Odd';
+}
 ```
 
 ## 2️⃣ Use Case 2: Create a New Prompt for the Model to Generate a TypeScript Function with a Specific Response Structure
@@ -30,12 +35,15 @@ Possible example:
 
 Now it's your turn to integrate your prompt below: 👀
 ```typescript
-Write your prompt here
+Generate a javascript method that take a string in parameter and can be read in both ways like radar or kayak
 ```
 
 What was the response?
 ```typescript
-Write AI response here
+function isPalindrome(word: string): boolean {
+  const reversed = word.split('').reverse().join('');
+  return word === reversed;
+}
 ```
 
 ## 3️⃣ Use Case 3: Compare Your Two Responses and Test Other Response Structures
