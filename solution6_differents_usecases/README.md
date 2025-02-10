@@ -1,11 +1,11 @@
 # 📝 Exercise6 - Different usecases ~ 20 minutes
-This file contains several exercises that highlight various use cases for a developer. These exercises will allow you to test multiple scenarios, providing a comprehensive understanding of different situations you may encounter in development.
+The fichier contient plusieurs exercices qui mettent en avant plusieurs use cases de développeur. Ces exercices vous permettent de tester plusieurs scénario, permettant de mieux comprendre comment utiliser l'IA dans votre quotidien.
 
 ## Use Case 1: Fix code
-Possible example:
+Exemple possible:
 ```typescript
-// Check why this code is not working whithout IA
-// Ask AI to fix it
+// Vérifiez pourquoi ce code ne fonctionne pas (sans IA)
+// Demandez à l'IA de réparer ce code
 function divide(a: int, b: str) {
     // Division
     let result = a / b;
@@ -14,9 +14,9 @@ function divide(a: int, b: str) {
 }
 ```
 
-Now it's your turn to integrate your prompt below: 👀
+À vous de jouer en intégrant votre prompt ci-dessous : 👀
 ```typescript
-Why is my code not working ?
+Pourquoi mon code ne fonctionne pas
 function divide(a: int, b: str) {
     // Division
     let result = a / b;
@@ -25,27 +25,30 @@ function divide(a: int, b: str) {
 }
 ```
 
-What was the response?
+Quelle a été la réponse ?
 ```typescript
-There are a few issues with your code:
+Votre code ne fonctionne pas pour plusieurs raisons :
 
-The parameter types are incorrect. The second parameter b should be a number, not a string.
-The result is being set to 0 before returning, which means the division result is not being used.
-Here is the corrected code:
+Le type de l'argument b est incorrect. Il devrait être un nombre (number) et non une chaîne de caractères (str).
+La division par zéro n'est pas gérée.
+La variable result est réinitialisée à 0 avant d'être retournée, ce qui rend la division inutile.
+Voici une version corrigée de votre code :
 
 function divide(a: number, b: number): number {
-    // Division
+    if (b === 0) {
+        throw new Error("Division by zero is not allowed.");
+    }
     let result = a / b;
     return result;
 }
 
-This code will correctly divide a by b and return the result.
+Cette version corrige les types des arguments, gère la division par zéro et retourne le résultat correct.
 ```
 
 ## Use Case 2: Optimize code
-Possible example:
+Exemple possible:
 ```typescript
-//ask AI to add some optimization like protecting the denominator from 0
+// Demandez à l'IA d'ajouter de l'optimisation comme une protection du denominateur différent de 0
 function divide(a, b) {
     let result = a / b;
     return result;
@@ -53,20 +56,21 @@ function divide(a, b) {
 
 ```
 
-Now it's your turn to integrate your prompt below: 👀
+À vous de jouer en intégrant votre prompt ci-dessous : 👀
 ```typescript
-Can you add a denominator check to this code ?
+Peux-tu ajouter une sécurité pour éviter le dénominateur à 0 ?
 function divide(a, b) {
     let result = a / b;
     return result;
 }
 ```
 
-What was the response?
+Quelle a été la réponse ?
 ```typescript
+Voici comment vous pouvez ajouter une vérification pour éviter la division par zéro :
 function divide(a, b) {
     if (b === 0) {
-        throw new Error("Denominator cannot be zero");
+        throw new Error("Division by zero is not allowed.");
     }
     let result = a / b;
     return result;
@@ -74,11 +78,11 @@ function divide(a, b) {
 ```
 
 ## Use Case 3: Reverse engineering
-Possible example:
+Exemple possible:
 ```typescript
-// Try to found out what this code do without AI
-// Ask AI what is the purpose of this code
-// Did you manage to found out before AI ?
+// Essayez de trouver ce que fait ce code sans IA
+// Demande à l'IA ce que fait ce code
+// Avez-vous réussi a comprendre en moins de temps que l'IA ?
 function calcul(limit) {
     let primes = [];
     let is_prime = new Array(limit + 1).fill(true);
@@ -104,9 +108,9 @@ function calcul(limit) {
 
 ```
 
-Now it's your turn to integrate your prompt below: 👀
+À vous de jouer en intégrant votre prompt ci-dessous : 👀
 ```typescript
-What does this code do ?
+Que fait ce code ?
 function calcul(limit) {
     let primes = [];
     let is_prime = new Array(limit + 1).fill(true);
@@ -131,42 +135,36 @@ function calcul(limit) {
 }
 ```
 
-What was the response?
+Quelle a été la réponse ?
 ```typescript
-The code defines a function calcul that generates a list of prime numbers up to a given limit using the Sieve of Eratosthenes algorithm. Here's a step-by-step explanation:
+Ce code implémente l'algorithme du crible d'Ératosthène pour trouver tous les nombres premiers jusqu'à une limite donnée. Voici une explication détaillée :
 
-Initialization:
-
-primes is an empty array that will store the prime numbers.
-is_prime is an array of boolean values, initially set to true, indicating that all numbers are considered prime.
-p is initialized to 2, the first prime number.
-Marking Non-Primes:
-
-The while loop iterates over numbers starting from 2. For each number p, if it is still marked as prime (is_prime[p] is true), it marks all multiples of p as non-prime (false) starting from p * p.
-Collecting Primes:
-
-After marking non-prime numbers, the for loop iterates from 2 to the given limit. If a number is still marked as prime (is_prime[p] is true), it is added to the primes array.
-Return:
-
-The function returns the primes array containing all prime numbers up to the given limit.
+La fonction calcul prend un argument limit qui représente la limite supérieure jusqu'à laquelle on veut trouver les nombres premiers.
+Elle initialise un tableau primes pour stocker les nombres premiers trouvés.
+Elle crée un tableau is_prime de taille limit + 1 et le remplit avec la valeur true, indiquant que tous les nombres sont initialement considérés comme premiers.
+Elle initialise la variable p à 2, le premier nombre premier.
+Elle utilise une boucle while pour marquer les multiples de chaque nombre premier comme non premiers (false) dans le tableau is_prime. Cette boucle continue tant que p * p est inférieur ou égal à limit.
+Une fois que tous les multiples des nombres premiers jusqu'à sqrt(limit) ont été marqués, elle utilise une boucle for pour ajouter tous les nombres restants marqués comme premiers dans le tableau primes.
+Enfin, elle retourne le tableau primes contenant tous les nombres premiers jusqu'à limit.
+En résumé, ce code trouve et retourne tous les nombres premiers jusqu'à une limite donnée en utilisant l'algorithme du crible d'Ératosthène.
 ```
 
 ## Use Case 4: REGEX
-Possible example:
+Exemple possible:
 ```typescript
-// Try to understand what this regex does without AI
-// Ask AI what the regex does and compare
-// Modify the regex to match your company
+// Essayez de comprendre cette regex sans utiliser l'IA
+// Demandez à l'IA ce que fait ce code et comparer avec votre temps de réflexion
+// Modifiez cette regex pour fonctionner pour votre entreprise
 
 ^[\w\.=-]+@[\w\.-]+\.[\w]{2,3}$
 ```
 
-Now it's your turn to integrate your prompt below: 👀
+À vous de jouer en intégrant votre prompt ci-dessous : 👀
 ```typescript
-Modify this regex ^[\w.=-]+@[\w.-]+.[\w]{2,3}Modify this regex ^[\w.=-]+@[\w.-]+.[\w]{2,3}$ so that it accepts only strings that finish by "@gmail.com"
+Modifie cette regex ^[\w.=-]+@[\w.-]+.[\w]{2,3} pour que cela accepts seulement les chaines qui finissent par "@gmail.com"
 ```
 
-What was the response?
+Quelle a été la réponse ?
 ```typescript
 ^[\w\.=-]+@gmail\.com$
 ```
