@@ -7,7 +7,7 @@ La technique "chain of thought" consiste à guider le modèle dans un processus 
 Exemple possible:
 
 ```typescript
-Voici mon code :
+Créez un prompt qui demande au modèle d'écrire de la documentation pour un code TypeScript.
 import express, { Request, Response } from 'express';
 
 const app = express();
@@ -24,15 +24,14 @@ app.post('/clients', (req: Request, res: Response): void => {
 app.listen(port, (): void => {
   console.log(`App listening on port ${port}`);
 });
-
-
-Écris une documentation pour ce service API.
 ```
 
 A vous de jouer en intégrant votre prompt ci-dessous: 👀
 
 ```typescript
-Créez un prompt qui demande au modèle d'écrire de la documentation pour un code TypeScript.
+Voici mon code :
+[code]
+Écris une documentation pour ce service API.
 ```
 
 Quelle a été la réponse ?
@@ -69,13 +68,13 @@ curl -X POST http://localhost:5000/clients -d "Client updated!"
 Exemple possible:
 
 ```typescript
-Écris une documentation pour ce service API en utilisant la méthodologie OpenAPI.
+Créez un prompt qui demande au modèle la documentation pour la même API, mais cette fois-ci en utilisant une méthodologie spécifique, par exemple la méthode OpenAPI
 ```
 
 A vous de jouer en intégrant votre prompt ci-dessous: 👀
 
 ```typescript
-Créez un prompt qui demande au modèle la documentation pour la même API, mais cette fois-ci en utilisant une méthodologie spécifique.
+Écris une documentation pour ce service API en utilisant la méthodologie OpenAPI.
 ```
 
 Quelle a été la réponse ?
