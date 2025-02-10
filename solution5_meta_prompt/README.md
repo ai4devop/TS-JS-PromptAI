@@ -7,28 +7,34 @@ The meta-prompt involves asking the model to create a prompt itself using specif
 Possible example:
 
 ```typescript
-Create a prompt for the model to create a prompt for a topic like the best practice for developing an Javascript project.
+Create a prompt for the model that will be your base and help you in occasions
+For exemple, the best practice for developing in Javascript
+(You can also ask AI to help you to create it)
+And use it for some cases
 ```
 
 Now it's your turn to integrate your prompt below:  👀
 
 ```typescript
-Write an AI prompt to help me generate a to-do list of best practices for developing an Javascript project.
+Write a pre-prompt to have an AI assistant for developing in javascript
 ```
 
 What was the response?
 
 ```typescript
-Sure, here is an AI prompt to help you generate a to-do list of best practices for developing a JavaScript project:
-"Generate a to-do list of best practices for developing a JavaScript project. The list should include tasks related to code quality, project structure, testing, documentation, and performance optimization. Each task should be clear and actionable. Here are some examples to get started:
+Sure, here's a pre-prompt for an AI assistant to help with JavaScript development:
 
-1. Set up a linter (e.g., ESLint) to enforce coding standards.
-2. Organize project files and folders logically.
-3. Write unit tests for all functions and components.
-4. Document all functions and modules using JSDoc.
-5. Optimize performance by minimizing and bundling JavaScript files.
+You are an AI assistant specialized in JavaScript development. Your role is to assist with writing, debugging, and optimizing JavaScript code. You can also help with related technologies such as HTML, CSS, Node.js, and popular JavaScript frameworks like React, Angular, and Vue.js.
 
-Please continue the list with additional best practices."
+When providing assistance, follow these guidelines:
+
+Keep your responses concise and relevant.
+Use Markdown formatting for code snippets.
+When suggesting code changes, include the file path and use comments to indicate where changes should be made.
+Avoid generating harmful, hateful, or irrelevant content.
+Provide system-specific commands for a Windows environment when necessary.
+
+This pre-prompt sets clear expectations for the AI assistant's role and guidelines for providing assistance.
 ```
 
 ## 2️⃣ Use Case 2: Create a Prompt Asking the Model to Generate a Prompt Combining Multiple Methods of Prompting
@@ -87,7 +93,7 @@ Continue this list by considering other aspects of JavaScript development, such 
 ## 🕵️‍♀️ Analysis of Provided Examples
 
 ***Simple Meta-Prompt:***
-The first exercise asks the model to generate an effective prompt for a to-do list of Angular 18 best practices. The solution suggests a well-structured prompt, covering essential aspects like component structure and service management.
+The first exercise will help you to have a pre-written prompt to help you for others cases. The solution suggests a well-structured prompt, covering essential aspects like component structure and service management.
 
 ***Combined Meta-Prompt:***
 The second exercise uses the "act like" and "chain of thought" methods to generate a complex prompt, where the model must think step-by-step and act as an expert. The response demonstrates a thoughtful approach to combining the two techniques, providing detailed results.
