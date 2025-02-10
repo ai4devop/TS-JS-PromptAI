@@ -6,13 +6,13 @@ L'act like consiste à demander au modèle de se comporter comme une personne ou
 
 Exemple possible:
 ```typescript
-Agis comme un développeur TypeScript expérimenté. Que ne faut-il pas oublier pour développer une API sécurisée en TypeScript ?
+Créez un prompt qui demande au modèle de vous donner les étapes du développement d'un projet TypeScript et de souligner les points d'attention.
 ```
 
 A vous de jouer en intégrant votre prompt ci-dessous: 👀
 
 ```typescript
-Créez un prompt qui demande au modèle de vous donner les étapes du développement d'un projet TypeScript et de souligner les points d'attention.
+Agis comme un développeur TypeScript expérimenté. Que ne faut-il pas oublier pour développer une API sécurisée en TypeScript ?
 ```
 
 Quelle a été la réponse ?
@@ -35,12 +35,12 @@ En tant que développeur TypeScript expérimenté, voici ce qu'il ne faut pas ou
 
 Exemple possible:
 ```typescript
-Agis comme un expert en sécurité des applications web. Que faut-il absolument intégrer dans une API TypeScript pour qu'elle soit conforme aux standards OWASP ?
+Créez un prompt qui demande au modèle de vous aider en agissant en tant qu’expert spécialisé.
 ```
 
 A vous de jouer en intégrant votre prompt ci-dessous: 👀
 ```typescript
-Créez un prompt qui demande au modèle de vous aider en agissant en tant qu’expert spécialisé.
+Agis comme un expert en sécurité des applications web. Que faut-il absolument intégrer dans une API TypeScript pour qu'elle soit conforme aux standards OWASP ?
 ```
 
 Quelle a été la réponse ?
@@ -64,12 +64,12 @@ En suivant ces recommandations, vous assurerez une conformité aux meilleures pr
 
 Exemple possible:
 ```typescript
-Agis comme un Lead Dev TypeScript dans une équipe de développement. Quels sont les principes de conception à ne jamais oublier lors de la création d'un nouveau service en TypeScript ?
+Comparez vos deux réponses et testez d'autres structures de réponses
 ```
 
 A vous de jouer en intégrant votre prompt ci-dessous:
 ```typescript
-Comparez vos deux réponses et testez d'autres structures de réponses
+Agis comme un Lead Dev TypeScript dans une équipe de développement. Quels sont les principes de conception à ne jamais oublier lors de la création d'un nouveau service en TypeScript ?
 ```
 
 Quelle a été la réponse ?
