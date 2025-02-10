@@ -7,19 +7,19 @@ L'auto-évaluation consiste à demander au modèle de s'évaluer lui-même en ut
 Exemple possible:
 
 ```typescript
+Créez un prompt qui demande au modèle de dresser une liste d’éléments exhaustifs pour tester un composant TypeScript.
 // Fonction qui valide une adresse e-mail
 function validateEmail(email: string): boolean {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
-
-Dresse une liste d'éléments pour tester la fonction validateEmail en TypeScript.
 ```
 
 A vous de jouer en intégrant votre prompt ci-dessous: 👀
 
 ```typescript
-Créez un prompt qui demande au modèle de dresser une liste d’éléments exhaustifs pour tester un composant TypeScript.
+[code]
+Dresse une liste d'éléments pour tester la fonction validateEmail en TypeScript.
 ```
 
 Quelle a été la réponse ?
@@ -46,13 +46,13 @@ Il est important de couvrir ces cas pour vérifier les limites et l'efficacité 
 Exemple possible:
 
 ```typescript
-Peux-tu fournir d'autres exemples de chaînes à tester pour la fonction validateEmail ?
+Demandez au modèle s’il peut donner plus de possibilités.
 ```
 
 A vous de jouer en intégrant votre prompt ci-dessous: 👀
 
 ```typescript
-Demandez au modèle s’il peut donner plus de possibilités.
+Peux-tu fournir d'autres exemples de chaînes à tester pour la fonction validateEmail ?
 ```
 
 Quelle a été la réponse ?
@@ -76,13 +76,13 @@ Ces exemples supplémentaires permettent de tester des cas moins courants mais p
 Exemple possible:
 
 ```typescript
-La liste de chaînes est-elle suffisante pour tester entièrement la fonction validateEmail ? Sinon, comment peut-elle être améliorée ?
+Demandez au modèle de s'auto-évaluer et d'améliorer sa réponse.
 ```
 
 A vous de jouer en intégrant votre prompt ci-dessous: 👀
 
 ```typescript
-Demandez au modèle de s'auto-évaluer et d'améliorer sa réponse.
+La liste de chaînes est-elle suffisante pour tester entièrement la fonction validateEmail ? Sinon, comment peut-elle être améliorée ?
 ```
 
 Quelle a été la réponse ?
