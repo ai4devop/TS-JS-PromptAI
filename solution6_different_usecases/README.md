@@ -43,9 +43,10 @@ This code will correctly divide a by b and return the result.
 ```
 
 ## Use Case 2: Optimize code
-Possible example:
+
+prompt:
 ```typescript
-//ask AI to add some optimization like protecting the denominator from 0
+//add some optimization like protecting the denominator from 0
 function bulkDivide(numbers: number[], b: number): number[] {
     let results: number[] = [];
     for (let i = 0; i < numbers.length; i++) {
@@ -54,17 +55,6 @@ function bulkDivide(numbers: number[], b: number): number[] {
     return results;
 }
 ```
-
-Now it's your turn to integrate your prompt below: 👀
-// ask AI to add some optimization like checking if b is zero or returning a specific default when b === 0
-function bulkDivide(numbers: number[], b: number): number[] {
-    let results: number[] = [];
-    for (let i = 0; i < numbers.length; i++) {
-        // This could trigger a runtime error if b is zero, and also might need more checks (e.g., is numbers[i] valid?)
-        results.push(numbers[i] / b);
-    }
-    return results;
-}
 
 What was the response?
 ```typescript
