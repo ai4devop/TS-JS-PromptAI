@@ -54,22 +54,27 @@ function divide(a, b) {
 ```
 
 Now it's your turn to integrate your prompt below: 👀
-```typescript
-Can you add a denominator check to this code ?
-function divide(a, b) {
-    let result = a / b;
-    return result;
+// ask AI to add some optimization like checking if b is zero or returning a specific default when b === 0
+function bulkDivide(numbers: number[], b: number): number[] {
+    let results: number[] = [];
+    for (let i = 0; i < numbers.length; i++) {
+        // This could trigger a runtime error if b is zero, and also might need more checks (e.g., is numbers[i] valid?)
+        results.push(numbers[i] / b);
+    }
+    return results;
 }
-```
 
 What was the response?
 ```typescript
-function divide(a, b) {
+function bulkDivide(numbers: number[], b: number): number[] {
     if (b === 0) {
         throw new Error("Denominator cannot be zero");
     }
-    let result = a / b;
-    return result;
+    let results: number[] = [];
+    for (let i = 0; i < numbers.length; i++) {
+        results.push(numbers[i] / b);
+    }
+    return results;
 }
 ```
 
