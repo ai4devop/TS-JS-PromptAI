@@ -1,8 +1,8 @@
-📝 Exercise7 - Zero-Shot Prompting ~ 10 minutes
+# 📝 Exercise7 - Zero-Shot Prompting ~ 10 minutes
 
 Zero-shot prompting means giving no example to the model—just the request or instructions. You rely on the model’s general knowledge and capabilities to complete the task.
 
-1️⃣ Use Case 1: Generate a Simple Utility in TypeScript With No Example
+## 1️⃣ Use Case 1: Generate a Simple Utility in TypeScript With No Example
 Possible example:
 ```typescript
 // In one shot, generate a TypeScript function named "getFullName" 
@@ -22,7 +22,7 @@ Model’s Response:
 Write AI response here
 ```
 
-2️⃣ Use Case 2: Ask for a Project Setup in a Single Instruction
+## 2️⃣ Use Case 2: Ask for a Project Setup in a Single Instruction
 
 Possible example:
 ```typescript
@@ -42,7 +42,7 @@ Model’s Response:
 Write AI response here
 ```
 
-3️⃣ Use Case 3: Compare the Results With Few-Shot Prompts
+## 3️⃣ Use Case 3: Compare the Results With Few-Shot Prompts
 
 Your turn:
 
