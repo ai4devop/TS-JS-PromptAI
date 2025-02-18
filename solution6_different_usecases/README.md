@@ -46,11 +46,13 @@ This code will correctly divide a by b and return the result.
 Possible example:
 ```typescript
 //ask AI to add some optimization like protecting the denominator from 0
-function divide(a, b) {
-    let result = a / b;
-    return result;
+function bulkDivide(numbers: number[], b: number): number[] {
+    let results: number[] = [];
+    for (let i = 0; i < numbers.length; i++) {
+        results.push(numbers[i] / b);
+    }
+    return results;
 }
-
 ```
 
 Now it's your turn to integrate your prompt below: 👀
